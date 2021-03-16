@@ -19,7 +19,10 @@ export async function getStaticProps(){
   const data = JSON.parse(JsonData)
   return { props : {
     products : data.products
-  }};
+  },
+  //regenrate page every 10sec
+  revalidate : 10
+};
 }
 
 export default HomePage;
